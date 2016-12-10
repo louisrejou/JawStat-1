@@ -1,10 +1,6 @@
 # JawStat
-## AngularJS Project
-### Ingésup
+## NodeJS
 
 Students :
-- Antoine Becher
-- Louis Réjou
-- Clément Lambert
 - Benjamin Wagner
 - Florent Pailhes
