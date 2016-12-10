@@ -1,18 +1,18 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item (click)="openPage(loginPage)">
+      <button menuClose ion-item (click)="openPage(loginPage)">
         <ion-icon name="ios-log-in">    Login</ion-icon>
       </button>
-      <button ion-item (click)="openPage(informations)">
+      <button menuClose ion-item (click)="openPage(informationsPage)">
         <ion-icon name="ios-information-circle-outline">    Informations</ion-icon>
       </button>
-      <button ion-item (click)="openPage(aide)">
+      <button menuClose ion-item (click)="openPage(aidePage)">
         <ion-icon name="ios-help-circle-outline">    Aide</ion-icon>
       </button>
     </ion-list>

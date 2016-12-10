@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Signin } from '../signin/signin';
 import { NavController } from 'ionic-angular';
 
 @Component({
