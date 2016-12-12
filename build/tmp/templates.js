@@ -150,27 +150,6 @@ try { module = angular.module("templates"); }
 catch(err) { module = angular.module("templates", []); }
 module.run(["$templateCache", function($templateCache) {
   "use strict";
-  $templateCache.put("src/app/contact/contact.tpl.html",
-    "");
-}]);
-})();
-
-(function(module) {
-try { module = angular.module("templates"); }
-catch(err) { module = angular.module("templates", []); }
-module.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("src/app/why/why.tpl.html",
-    "\n" +
-    "");
-}]);
-})();
-
-(function(module) {
-try { module = angular.module("templates"); }
-catch(err) { module = angular.module("templates", []); }
-module.run(["$templateCache", function($templateCache) {
-  "use strict";
   $templateCache.put("src/app/home/home.tpl.html",
     "<div class=\"pure-g\">\n" +
     "  <div class=\"island3 pure-u-1 pure-u-lg-2-3\">\n" +
@@ -268,6 +247,27 @@ module.run(["$templateCache", function($templateCache) {
     "    <p>Easily optimize css js and images files for production.</p>\n" +
     "  </div>\n" +
     "</div>\n" +
+    "");
+}]);
+})();
+
+(function(module) {
+try { module = angular.module("templates"); }
+catch(err) { module = angular.module("templates", []); }
+module.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("src/app/contact/contact.tpl.html",
+    "");
+}]);
+})();
+
+(function(module) {
+try { module = angular.module("templates"); }
+catch(err) { module = angular.module("templates", []); }
+module.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("src/app/why/why.tpl.html",
+    "\n" +
     "");
 }]);
 })();
