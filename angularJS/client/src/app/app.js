@@ -18,7 +18,8 @@
   angular.module('app', [
       'router',
       'home',
-      'getting-started',
+      'about-us',
+
       'common.header',
       'common.footer',
       'common.services.data',

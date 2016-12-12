@@ -1,8 +1,3 @@
-/**
- * Created by b3nit on 06/12/2016.
- */
-
-
 
 (function() {
   'use strict';
@@ -38,21 +33,41 @@
           }
         }
       })
-      .state('root.getting-started', {
-        url: '/getting-started',
+      .state('root.about-us', {
+        url: '/about-us',
         views: {
           '@': {
-            templateUrl: 'src/app/getting-started/getting-started.tpl.html',
-            controller: 'GettingStartedCtrl as docs'
+            templateUrl: 'src/app/about-us/about-us.tpl.html',
+            controller: 'AboutUsCtrl'
           }
         }
-      });
+      })
+      .state('root.why', {
+        url: '/why',
+        views: {
+          '@': {
+            templateUrl: 'src/app/why/why.tpl.html',
+            controller: 'WhyCtrl'
+          }
+        }
+      })
+      .state('root.contact', {
+        url: '/contact',
+        views: {
+          '@': {
+            templateUrl: 'src/app/contact/contact.tpl.html',
+            controller: 'ContactCtrl'
+          }
+        }
+      })
   }
 
   angular.module('router', [
     'ui.router',
     'home',
-    'getting-started',
+    'about-us',
+
+
     'common.header',
     'common.footer',
     'common.services.data',
