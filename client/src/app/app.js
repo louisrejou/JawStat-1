@@ -17,6 +17,7 @@
 
   angular.module('app', [
       'ngMap',
+      'ui.bootstrap',
       'router',
       'common.header',
       'common.footer',

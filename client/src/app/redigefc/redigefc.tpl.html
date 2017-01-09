@@ -1,0 +1,207 @@
+<div class="pure-g text-center">
+    <div class="pure-u-1">
+        <h1>Rédiger Fiche Client</h1>
+        <h3>Index de Qualité du Sommeil de Pittsburgh (PSQI)</h3>
+    </div>
+</div>
+<br>
+<div class="pure-g text-left" ng-controller="RedigeCtrl">
+    <div>
+        <button type="submit" class="pure-button pure-button-primary" ng-click="goHome()">RETOUR</button>
+    </div>
+    <div class="pure-u-1">
+        <form class="pure-form">
+            <fieldset class="pure-form-stacked">
+                <div class="pure-control-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" placeholder="" class="pure-input-1" ng-model="user.nom">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" placeholder="" class="pure-input-1" ng-model="user.prenom">
+                </div>
+
+                <div clas="pure-control-group">
+                    <label for="date1">Date de naissance :</label>
+                    <input type="date" id="date1" placeholder="Date de naissance" class="pure-input-1" ng-model="user.date1">
+                    <label for="date2">Date de ce jour :</label>
+                    <input type="date" id="date2" placeholder="Date de ce jour" class="pure-input-1" ng-model="user.date2">
+                </div>
+            </fieldset>
+
+            <div>
+                <p>Les questions suivantes ont trait à vos habitudes de sommeil peandant le dernier mois seulement. Vos réponses doivent indiquer ce qui correspond aux expèriences que vous avez eues pendant la majorité des jours et des nuits au cours du dernier mois. Répondez à toutes les questions.</p>
+
+                <p>1. Au cours du mois dernier, quand êtes-vous habituellement allé vous coucher le soir ?</p>
+                    <label for="in1">Heure habituelle de coucher : </label><input type="text" placeholder="" id="in1" ng-model="user.in1"> (l'heure doit être au format 24h)
+
+                <p>2. Au cours du mois dernier, combien vous a-t-il habituellement fallu de temps (en minutes) pour vous endormir chaque soir ?</p>
+                    <label for="in2">Nombre de minutes : </label><input type="text" placeholder="" id="in2" ng-model="user.in2">
+
+                <p>3. Au cours du mois dernier, quand vous êtes-vous habituellement levé le matin ?</p>
+                <label for="in3"></label>Heure habituelle du lever :<input type="text" placeholder="" id="in3" ng-model="user.in3"> (l'heure doit être au format 24h)
+
+                <p>4. Au cours du mois dernier, combien d'heures de sommeil effectif avez-vous eues chaque nuit ?</p>
+                <label for="in4"></label>Nombre d'heures de sommeil par nuit : <input type="text" placeholder="" id="in4" ng-model="user.in4"> (Ce nombre peut être différent du nombre d'heures que vous avez passées au lit)
+            </div>
+            <div>
+                <p>5. Au cours du mois dernier, avec quelle fréquence avez-vous eu des troubles de sommeil car...</p>
+                <table>
+                    <tr>
+                        <td></td><td>Pas au cours du dernier mois</td><td>Moins d'1 fois par semaine</td>
+                        <td>1 ou 2 fois par semaine</td><td>3 ou 4 fois par semaine</td>
+                    </tr>
+                    <tr><td>a) vous n'avez pas pu vous endormir en moins de 30mn</td>
+                        <td><input type="radio" value="0" ng-model="user.preference1"></td><td><input type="radio" value="1" ng-model="user.preference1"></td><td><input type="radio" value="2" ng-model="user.preference1"></td><td><input type="radio" value="3" ng-model="user.preference1"></td></tr>
+                    <tr><td>b) vous vous êtes réveillé(e) au milieu de la nuit ou précocement le matin</td>
+                        <td><input type="radio" value="0" ng-model="user.preference2"></td><td><input type="radio" value="1" ng-model="user.preference2"></td><td><input type="radio" value="2" ng-model="user.preference2"></td><td><input type="radio" value="3" ng-model="user.preference2"></td></tr>
+                    <tr><td>c) vous avez dû vous lever pour aller aux toilettes</td>
+                        <td><input type="radio" value="0" ng-model="user.preference3"></td><td><input type="radio" value="1" ng-model="user.preference3"></td><td><input type="radio" value="2" ng-model="user.preference3"></td><td><input type="radio" value="3" ng-model="user.preference3"></td></tr>
+                    <tr><td>d) vous n'avez pas pu respirer correctement</td>
+                        <td><input type="radio" value="0" ng-model="user.preference4"></td><td><input type="radio" value="1" ng-model="user.preference4"></td><td><input type="radio" value="2" ng-model="user.preference4"></td><td><input type="radio" value="3" ng-model="user.preference4"></td></tr>
+                    <tr><td>e) vous avez toussé</td>
+                        <td><input type="radio" value="0" ng-model="user.preference5"></td><td><input type="radio" value="1" ng-model="user.preference5"></td><td><input type="radio" value="2" ng-model="user.preference5"></td><td><input type="radio" value="3" ng-model="user.preference5"></td></tr>
+                    <tr><td>f) vous avez eu trop froid</td>
+                        <td><input type="radio" value="0" ng-model="user.preference6"></td><td><input type="radio" value="1" ng-model="user.preference6"></td><td><input type="radio" value="2" ng-model="user.preference6"></td><td><input type="radio" value="3" ng-model="user.preference6"></td></tr>
+                    <tr><td>g) vous avez eu trop chaud</td>
+                        <td><input type="radio" value="0" ng-model="user.preference7"></td><td><input type="radio" value="1" ng-model="user.preference7"></td><td><input type="radio" value="2" ng-model="user.preference7"></td><td><input type="radio" value="3" ng-model="user.preference7"></td></tr>
+                    <tr><td>h) vous avez eu de mauvais rêves</td>
+                        <td><input type="radio" value="0" ng-model="user.preference8"></td><td><input type="radio" value="1" ng-model="user.preference8"></td><td><input type="radio" value="2" ng-model="user.preference8"></td><td><input type="radio" value="3" ng-model="user.preference8"></td></tr>
+                    <tr><td>i) vous avez eu des douleurs</td>
+                        <td><input type="radio" value="0" ng-model="user.preference9"></td><td><input type="radio" value="1" ng-model="user.preference9"></td><td><input type="radio" value="2" ng-model="user.preference9"></td><td><input type="radio" value="3" ng-model="user.preference9"></td></tr>
+                    <tr><td>j) pour d'autre(s) raison(s). Donnez une description :</td><td><textarea rows="2" cols="25" ng-model="user.in_preference"></textarea></td></tr>
+                    <tr><td>Indiquez la fréquence des troubles du sommeil pour ces raisons</td>
+                        <td><input type="radio" value="0" ng-model="user.preference10"></td><td><input type="radio" value="1" ng-model="user.preference10"></td><td><input type="radio" value="2" ng-model="user.preference10"></td><td><input type="radio" value="3" ng-model="user.preference10"></td></tr>
+                </table>
+            </div>
+
+            <div>
+                <p>6. Au cours du mois dernier, comment évalueriez-vous globalement la qualité de votre sommeil ?</p>
+                <label for="option-1" class="pure-radio">
+                    <input id="option-1" type="radio" value="0" ng-model="user.preference11">
+                    Très bonne
+                </label>
+                <label for="option-2" class="pure-radio">
+                    <input id="option-2" type="radio" value="1" ng-model="user.preference11">
+                    Assez bonne
+                </label>
+                <label for="option-3" class="pure-radio">
+                    <input id="option-3" type="radio" value="2" ng-model="user.preference11">
+                    Assez mauvaise
+                </label>
+                <label for="option-4" class="pure-radio">
+                    <input id="option-4" type="radio" value="3" ng-model="user.preference11">
+                    Très mauvaise
+                </label>
+            </div>
+
+            <div>
+                <p>7. Au cours du mois dernier, combien de fois avez-vous pris des médicaments (prescrits par votre médecin ou achetés sans ordonnance) pour faciliter votre sommeil ?</p>
+                <label for="option-5" class="pure-radio">
+                    <input id="option-5" type="radio" value="0" ng-model="user.preference12">
+                    Pas au cours du dernier moi
+                </label>
+                <label for="option-6" class="pure-radio">
+                    <input id="option-6" type="radio" value="1" ng-model="user.preference12">
+                    Moins d'1 fois par semaine
+                </label>
+                <label for="option-7" class="pure-radio">
+                    <input id="option-7" type="radio" value="2" ng-model="user.preference12">
+                    1 ou 2 fois par semaine
+                </label>
+                <label for="option-8" class="pure-radio">
+                    <input id="option-8" type="radio" value="3" ng-model="user.preference12">
+                    3 ou 4 fois par semaine
+                </label>
+            </div>
+
+            <div>
+                <p>8. Au cours du mois dernier, combien de fois avez-vous eu des difficultés à demeurer éveillé pendant que vous conduisiez, preniez vos repas, étiez occupé(e) dans une activité sociale ?</p>
+                <label for="option-9" class="pure-radio">
+                    <input id="option-9" type="radio" value="0" ng-model="user.preference13">
+                    Pas au cours du dernier mois
+                </label>
+                <label for="option-10" class="pure-radio">
+                    <input id="option-10" type="radio" value="1" ng-model="user.preference13">
+                    Moins d'1 fois par semaine
+                </label>
+                <label for="option-11" class="pure-radio">
+                    <input id="option-11" type="radio" value="2" ng-model="user.preference13">
+                    1 ou 2 fois par semaine
+                </label>
+                <label for="option-12" class="pure-radio">
+                    <input id="option-12" type="radio" value="3" ng-model="user.preference13">
+                    3 ou 4 fois par semaine
+                </label>
+            </div>
+
+            <div>
+                <p>9. Au cours du mois dernier, à quel degré cela a-t-il représenté un problème pour vous d'avoir assez d'enthousiasme pour faire ce que vous aviez à faire ?</p>
+                <label for="option-13" class="pure-radio">
+                    <input id="option-13" type="radio" value="0" ng-model="user.preference14">
+                    Pas de problème du tout
+                </label>
+                <label for="option-14" class="pure-radio">
+                    <input id="option-14" type="radio" value="1" ng-model="user.preference14">
+                    Seulement un petit problème
+                </label>
+                <label for="option-15" class="pure-radio">
+                    <input id="option-15" type="radio" value="2" ng-model="user.preference14">
+                    Un certain problème
+                </label>
+                <label for="option-16" class="pure-radio">
+                    <input id="option-16" type="radio" value="3" ng-model="user.preference14">
+                    Un très gros problème
+                </label>
+            </div>
+
+            <div>
+                <p>10. Avez vous un conjoint ou un camarade de chambre ?</p>
+                <label for="option-17" class="pure-radio">
+                    <input id="option-17" type="radio" value="0" ng-model="user.preference15">
+                    Ni l'un, ni l'autre
+                </label>
+                <label for="option-18" class="pure-radio">
+                    <input id="option-18" type="radio" value="1" ng-model="user.preference15">
+                    Oui mais dans une chambre différente
+                </label>
+                <label for="option-19" class="pure-radio">
+                    <input id="option-19" type="radio" value="2" ng-model="user.preference15">
+                    Oui dans la même chambre mais pas dans le même lit
+                </label>
+                <label for="option-20" class="pure-radio">
+                    <input id="option-20" type="radio" value="3" ng-model="user.preference15">
+                    Oui dans le même lit
+                </label>
+            </div>
+
+            <div>
+                <p>11. Si vous avez un camarade de chambre ou un conjoint, demandez-lui combien de fois le mois dernier vous avez présenté :</p>
+                <table>
+                    <tr>
+                        <td></td><td>Pas au cours du dernier mois</td><td>Moins d'1 fois par semaine</td>
+                        <td>1 ou 2 fois par semaine</td><td>3 ou 4 fois par semaine</td>
+                    </tr>
+                    <tr><td>a) un ronflement fort</td>
+                        <td><input type="radio" ng-model="user.preference16" value="0"></td><td><input type="radio" ng-model="user.preference16" value="1"></td><td><input type="radio" ng-model="user.preference16" value="2"></td><td><input type="radio" ng-model="user.preference16" value="3"></td></tr>
+                    <tr><td>b) de longues pauses respiratoires pendant votre sommeil</td>
+                        <td><input type="radio" ng-model="user.preference17" value="0"></td><td><input type="radio" ng-model="user.preference17" value="1"></td><td><input type="radio" ng-model="user.preference17" value="2"></td><td><input type="radio" ng-model="user.preference17" value="3"></td></tr>
+                    <tr><td>c) des saccades ou des secousses des jambes pendant que vous dormiez</td>
+                        <td><input type="radio" ng-model="user.preference18" value="0"></td><td><input type="radio" ng-model="user.preference18" value="1"></td><td><input type="radio" ng-model="user.preference18" value="2"></td><td><input type="radio" ng-model="user.preference18" value="3"></td></tr>
+                    <tr><td>d) des épisodes de désorientation ou de confusion pendant le sommeil</td>
+                        <td><input type="radio" ng-model="user.preference19" value="0"></td><td><input type="radio" ng-model="user.preference19" value="1"></td><td><input type="radio" ng-model="user.preference19" value="2"></td><td><input type="radio" ng-model="user.preference19" value="3"></td></tr>
+                    <tr><td>e) d'autres motifs d'agitation pendant le sommeil</td>
+                        <td><input type="radio" ng-model="user.preference20" value="0"></td><td><input type="radio" ng-model="user.preference20" value="1"></td><td><input type="radio" ng-model="user.preference20" value="2"></td><td><input type="radio" ng-model="user.preference20" value="3"></td></tr>
+                </table>
+            </div>
+            <br>
+            <br>
+
+            <div class="text-center">
+                <button type="submit" class="pure-button pure-input-2-3 pure-input-rounded pure-button-primary" ng-click="update(user)">ENVOYER</button>
+            </div>
+            <!--
+            <pre>user = {{user | json}}</pre>
+            <pre>master = {{master | json}}</pre>
+            -->
+        </form>
+    </div>
+</div>

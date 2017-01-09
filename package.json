@@ -55,6 +55,7 @@
     "test": "gulp travis"
   },
   "dependencies": {
+    "angular-ui-bootstrap": "^2.4.0",
     "ngmap": "^1.17.8"
   }
 }

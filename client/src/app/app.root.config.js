@@ -55,6 +55,15 @@
           }
         }
       })
+        .state('redigefc', {
+          url: '/redigefc',
+          views: {
+            '@': {
+              templateUrl: 'src/app/redigefc/redigefc.tpl.html',
+              controller: 'RedigeCtrl'
+            }
+          }
+        })
   }
 
   angular.module('router', [
@@ -63,6 +72,7 @@
     'about-us',
     'contact',
     'why',
+    'redigefc',
     'common.header',
     'common.footer',
     'common.services.data',
