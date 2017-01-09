@@ -30,6 +30,7 @@ import FooModule from './foo/foo.component';
 import AboutModule from './about/about.component';
 import FormsModule from './forms/forms.component';
 import ContactModule from './contact/contact.component';
+import WhyModule from './why/why.component';
 
 import './app.css';
 
@@ -40,7 +41,7 @@ import './app.css';
  */
 angular.module('jawStat', [ngCookies, ngResource, ngSanitize,
   'btford.socket-io', uiRouter, uiBootstrap, _Auth, account, admin, navbar, footer, main, FooModule, AboutModule, FormsModule, ContactModule,
-  constants, socket, util
+  WhyModule,constants, socket, util
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

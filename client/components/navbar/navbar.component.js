@@ -14,6 +14,9 @@ export class NavbarComponent {
     title: 'About',
     state: 'about'
   }, {
+    title: 'Why',
+    state: 'why'
+  }, {
     title: 'Contact',
     state: 'contact'
   }];
