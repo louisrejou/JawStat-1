@@ -24,12 +24,7 @@
         views: {
           '@': {
             templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
+            controller: 'HomeCtrl'
           }
         }
       })
@@ -66,8 +61,8 @@
     'ui.router',
     'home',
     'about-us',
-
-
+    'contact',
+    'why',
     'common.header',
     'common.footer',
     'common.services.data',

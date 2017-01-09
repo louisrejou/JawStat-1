@@ -10,5 +10,8 @@
   }
 
   angular.module('contact', [])
-    .controller('ContactCtrl', ContactCtrl);
+      .controller('ContactCtrl', ContactCtrl)
+
+
 })();
+

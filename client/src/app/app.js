@@ -16,10 +16,8 @@
   }
 
   angular.module('app', [
+      'ngMap',
       'router',
-      'home',
-      'about-us',
-
       'common.header',
       'common.footer',
       'common.services.data',

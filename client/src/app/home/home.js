@@ -5,11 +5,11 @@
    * @name  HomeCtrl
    * @description Controller
    */
-  function HomeCtrl(data) {
-    var home = this;
-    home.data = data.data;
+  function HomeCtrl() {
+
   }
 
   angular.module('home', [])
     .controller('HomeCtrl', HomeCtrl);
-})();
+
+})()

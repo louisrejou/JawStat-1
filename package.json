@@ -53,5 +53,8 @@
   },
   "scripts": {
     "test": "gulp travis"
+  },
+  "dependencies": {
+    "ngmap": "^1.17.8"
   }
 }
